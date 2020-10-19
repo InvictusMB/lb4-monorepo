@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "author": "InvictusMB <invictusmb@gmail.com>",
+  "scripts": {
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "prestart": "npm run build",
+    "start": "exit 0",
+    "lerna": "lerna",
+    "postinstall": "npm run build"
+  },
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist" : ["**/patch-package"]
+  },
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  }
+}
